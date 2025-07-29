@@ -1,32 +1,4 @@
 
-# import google.generativeai as genai
-
-# class GeminiClient:
-#     def __init__(self, api_key):
-#         genai.configure(api_key=api_key)
-#         self.model = genai.GenerativeModel('gemini-1.5-flash')
-#         self.chat = type('', (), {'completions': type('', (), {'create': self._create})()})()
-    
-#     def _create(self, model, messages):
-#         prompt = "\n".join(f"{msg['role']}: {msg['content']}" for msg in messages) + "\nAssistant:"
-#         try:
-#             response = self.model.generate_content(prompt)
-#             return type('', (), {'choices': [type('', (), {'message': type('', (), {'content': response.text})()})()]})()
-#         except Exception as e:
-#             return type('', (), {'choices': [type('', (), {'message': type('', (), {'content': f"Error: {e}"})()})()]})()
-
-# client = GeminiClient(api_key="AIzaSyBT_Xg9JVjknOWcT87dur3315E45gsaCTU")
-
-# completion = client.chat.completions.create(
-#     model="gemini-1.5-flash",
-#     messages=[
-#         {"role": "system", "content": "You are a virtual assistant named Jarvis skilled in general tasks like Alexa and Google Assistant"},
-#         {"role": "user", "content": "what is coding"}
-#     ]
-# )
-
-# print(completion.choices[0].message.content)
-
 
 import os
 import google.generativeai as genai
